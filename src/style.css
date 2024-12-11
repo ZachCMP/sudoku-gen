@@ -1,0 +1,70 @@
+:root {
+  --border-color: #ccc;
+  --bg-color: #333;
+  --cell-size: 3rem;
+  --possible-color: #888;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-color);
+  font-family: sans-serif;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#buttons {
+  display: flex;
+  gap: 8px;
+}
+
+#sudoku-table {
+  border-collapse: collapse;
+}
+
+#sudoku-table.invalid {
+  outline: 4px solid red;
+}
+
+#sudoku-table td {
+  border: 1px solid var(--border-color);
+  width: var(--cell-size);
+  height: var(--cell-size);
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+}
+
+#sudoku-table td:focus {
+  outline: 3px solid lime;
+}
+
+#sudoku-table td .possible {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  font-size: 6pt;
+  padding: 2px;
+  color: var(--possible-color);
+}
+
+#sudoku-table tr:nth-child(3) td {
+  border-bottom-width: 4px;
+}
+
+#sudoku-table tr:nth-child(6) td {
+  border-bottom-width: 4px;
+}
+
+#sudoku-table tr td:nth-child(3) {
+  border-right-width: 4px;
+}
+
+#sudoku-table tr td:nth-child(6) {
+  border-right-width: 4px;
+}
