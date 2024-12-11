@@ -8,6 +8,7 @@ export default class BoardDisplay {
 
   constructor(root: HTMLElement) {
     this.root = root
+
     this.cellMap = new Map<Cell, HTMLTableCellElement>()
 
     this.root.addEventListener('keydown', e => {
