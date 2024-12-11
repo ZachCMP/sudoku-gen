@@ -1,4 +1,4 @@
-import Board, { ITERATOR } from "./Board"
+import Board from "./Board"
 import Cell from "./Cell"
 
 export default class BoardDisplay {
