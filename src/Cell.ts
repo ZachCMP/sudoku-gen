@@ -45,11 +45,4 @@ export default class Cell {
 
     return Array.from(new Set(ITERATOR).difference(allValues))
   }
-
-  get blankSiblingCount() {
-    const rowVals = this.row.filter(cell => cell !== this && cell.value === null)
-    const columnVals = this.column.filter(cell => cell !== this && cell.value === null)
-    const groupVals = this.group.filter(cell => cell !== this && cell.value === null)
-    return [rowVals, columnVals, groupVals].reduce((acc, e) => e.length < acc ? e.length : acc, 9)
-  }
 }
